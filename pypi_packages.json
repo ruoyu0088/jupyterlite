@@ -328,17 +328,27 @@
         "unvendored_tests": false,
         "version": "1.14.0"
     },
-    "z3": {
-        "depends": [],
-        "file_name": "z3-4.14.2.0-py3-none-pyodide_2024_0_wasm32.whl",
+    "geoviews": {
+        "depends": [
+            "shapely",
+            "pyproj",
+            "certifi",
+            "cartopy",
+            "pyshp",
+            "geos",
+            "cycler",
+            "fonttools",
+            "kiwisolver"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/56/1e/9f63bfc1db7f59c13daa3eabef0b7ae13b00fc62e6c2580a44884c9cd930/geoviews-1.14.1-py3-none-any.whl",
         "imports": [
-            "z3"
+            "geoviews"
         ],
         "install_dir": "site",
-        "name": "z3",
+        "name": "geoviews",
         "package_type": "package",
-        "sha256": "466890b09dcdc74834e08de84eff640b1329788c969e44bf5f1b4e1704b7e185",
+        "sha256": "a05fa86e96c0bc9da033846c1a6c703fa3cb241fbefe13491041bae516e3124b",
         "unvendored_tests": false,
-        "version": "4.14.2.0"
+        "version": "1.14.1"
     }
 }

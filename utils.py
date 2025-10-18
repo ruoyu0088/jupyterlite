@@ -287,16 +287,39 @@ def get_pypi_packages():
             depends=["mpmath"],
         ),
         Package(
-            name="z3",
-            version="4.14.2.0",
-            imports=["z3"],
-            file_name="z3-4.14.2.0-py3-none-pyodide_2024_0_wasm32.whl",
+            name="geoviews",
+            version="1.14.1",
+            imports=["geoviews"],
+            depends=[
+                "shapely",
+                "pyproj",
+                "certifi",
+                "cartopy",
+                "pyshp",
+                "geos",
+                "cycler",
+                "fonttools",
+                "kiwisolver",
+            ],
         ),
     ]
 
 
 def get_local_packages():
     return [
+        Package(
+            name="z3",
+            version="4.14.2.0",
+            imports=["z3"],
+            file_name="z3-4.14.2.0-py3-none-pyodide_2024_0_wasm32.whl",
+        ),
+        # Package(
+        #     name="polars",
+        #     version="1.33.1",
+        #     imports=["polars"],
+        #     file_name="polars-1.33.1-cp39-abi3-emscripten_4_0_14_wasm32.whl",
+        #     depends=["numpy", "pyarrow", "openpyxl"],
+        # ),
         Package(
             name="matplotlib",
             version="3.8.4",
@@ -336,7 +359,7 @@ def patch_pyodide_lock_file_names():
                 f"https://cdn.jsdelivr.net/pyodide/{PYODIDE_VERSION}/full/{file_name}"
             )
 
-    for json_name in ['pypi', 'local']:
+    for json_name in ["pypi", "local"]:
         extra_packages_file_name = Path(f"./{json_name}_packages.json")
         if extra_packages_file_name.exists():
             with open(extra_packages_file_name, "r", encoding="utf-8") as f:

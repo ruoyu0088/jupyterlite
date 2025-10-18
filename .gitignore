@@ -114,3 +114,7 @@ dmypy.json
 # jupyterlite
 *.doit.db
 _output
+.venv
+request_cach
+local_packages.json
+helper-1.0.0-py3-none-any.whl
