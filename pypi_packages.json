@@ -350,5 +350,18 @@
         "sha256": "a05fa86e96c0bc9da033846c1a6c703fa3cb241fbefe13491041bae516e3124b",
         "unvendored_tests": false,
         "version": "1.14.1"
+    },
+    "ipyevents": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/ca/d3/642a6dc3db8ea558a9b5fbc83815b197861868dc98f98a789b85c7660670/ipyevents-2.0.4-py3-none-any.whl",
+        "imports": [
+            "ipyevents"
+        ],
+        "install_dir": "site",
+        "name": "ipyevents",
+        "package_type": "package",
+        "sha256": "e532e05b037f70373850723f483d2830cb8a633e5aa19637ee9e7adaf41421f1",
+        "unvendored_tests": false,
+        "version": "2.0.4"
     }
 }

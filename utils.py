@@ -302,6 +302,11 @@ def get_pypi_packages():
                 "kiwisolver",
             ],
         ),
+        Package(
+            name="ipyevents",
+            version="2.0.4",
+            imports=["ipyevents"],
+        )
     ]
 
 
