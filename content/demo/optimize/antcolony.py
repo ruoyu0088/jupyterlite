@@ -68,7 +68,7 @@ class ShortestLoopViewer:
         
     def plot_data(self):
         pheromone_matrix = np.clip(self.sl.pheromone_matrix, 0.1, None)
-        alpha = (pheromone_matrix.ravel() - pheromone_matrix.min()) / pheromone_matrix.ptp()
+        alpha = (pheromone_matrix.ravel() - pheromone_matrix.min()) / np.ptp(pheromone_matrix)
         x, y = self.sl.points[self.sl.best_path].T
         return dict(x=x, y=y, alpha=alpha)
     
@@ -108,7 +108,7 @@ class ShortestLoopViewer:
         fig1.scatter('x', 'y', source=self.source1)
         fig2.multi_line('xs', 'ys', alpha='alpha', source=self.source2)
         self.label = Label(x=5, y=5, x_units='screen', y_units='screen',
-                         text=f'length:{self.sl.min_dist:5.3f}', render_mode='css',
+                         text=f'length:{self.sl.min_dist:5.3f}',
                          border_line_color='black', border_line_alpha=1.0,
                          background_fill_color='white', background_fill_alpha=1.0)        
         fig1.add_layout(self.label)

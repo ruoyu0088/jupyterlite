@@ -47,3 +47,4 @@ pyviz-comms
 pythreejs
 anywidget
 altair
+jupyter_bokeh
