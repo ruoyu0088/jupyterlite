@@ -1,0 +1,344 @@
+{
+    "param": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/6a/57/2b46b199482bbaaade2f978164577cf7c2fdc2782a7caf29fabd5265a84f/param-2.2.1-py3-none-any.whl",
+        "imports": [
+            "param"
+        ],
+        "install_dir": "site",
+        "name": "param",
+        "package_type": "package",
+        "sha256": "e3a4ca7f3d7610615129a55dbde2e90eb67d11cef70936487b0a59717dba0bdc",
+        "unvendored_tests": false,
+        "version": "2.2.1"
+    },
+    "psygnal": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/fd/91/a65b177c94269fb60eb913d0e8157498ee676901f054f0f04a7f0445b710/psygnal-0.15.0-cp310-cp310-macosx_10_9_x86_64.whl",
+        "imports": [
+            "psygnal"
+        ],
+        "install_dir": "site",
+        "name": "psygnal",
+        "package_type": "package",
+        "sha256": "3c33a022d2bdfa68c71f6fe964fb316b8cff36a936a6075bb14378823b5bd28d",
+        "unvendored_tests": false,
+        "version": "0.15.0"
+    },
+    "anywidget": {
+        "depends": [
+            "psygnal"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/2b/f0/09a30ca0551af20c7cefa7464b7ccb6f5407a550b83c4dcb15c410814849/anywidget-0.9.18-py3-none-any.whl",
+        "imports": [
+            "anywidget"
+        ],
+        "install_dir": "site",
+        "name": "anywidget",
+        "package_type": "package",
+        "sha256": "944b82ef1dd17b8ff0fb6d1f199f613caf9111338e6e2857da478f6e73770cb8",
+        "unvendored_tests": false,
+        "version": "0.9.18"
+    },
+    "plotly": {
+        "depends": [
+            "anywidget",
+            "numpy",
+            "pandas",
+            "narwhals",
+            "nbformat"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/3f/93/023955c26b0ce614342d11cc0652f1e45e32393b6ab9d11a664a60e9b7b7/plotly-6.3.1-py3-none-any.whl",
+        "imports": [
+            "plotly"
+        ],
+        "install_dir": "site",
+        "name": "plotly",
+        "package_type": "package",
+        "sha256": "8b4420d1dcf2b040f5983eed433f95732ed24930e496d36eb70d211923532e64",
+        "unvendored_tests": false,
+        "version": "6.3.1"
+    },
+    "narwhals": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/1d/86/ac808ecb94322a3f1ea31627d13ab3e50dd4333564d711e0e481ad0f4586/narwhals-2.8.0-py3-none-any.whl",
+        "imports": [
+            "narwhals"
+        ],
+        "install_dir": "site",
+        "name": "narwhals",
+        "package_type": "package",
+        "sha256": "6304856676ba4a79fd34148bda63aed8060dd6edb1227edf3659ce5e091de73c",
+        "unvendored_tests": false,
+        "version": "2.8.0"
+    },
+    "nbformat": {
+        "depends": [
+            "fastjsonschema",
+            "jsonschema",
+            "attrs",
+            "referencing",
+            "jsonschema_specifications"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/a9/82/0340caa499416c78e5d8f5f05947ae4bc3cba53c9f038ab6e9ed964e22f1/nbformat-5.10.4-py3-none-any.whl",
+        "imports": [
+            "nbformat"
+        ],
+        "install_dir": "site",
+        "name": "nbformat",
+        "package_type": "package",
+        "sha256": "3b48d6c8fbca4b299bf3982ea7db1af21580e4fec269ad087b9e81588891200b",
+        "unvendored_tests": false,
+        "version": "5.10.4"
+    },
+    "ipywidgets": {
+        "depends": [
+            "jupyterlab-widgets"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/58/6a/9166369a2f092bd286d24e6307de555d63616e8ddb373ebad2b5635ca4cd/ipywidgets-8.1.7-py3-none-any.whl",
+        "imports": [
+            "ipywidgets"
+        ],
+        "install_dir": "site",
+        "name": "ipywidgets",
+        "package_type": "package",
+        "sha256": "764f2602d25471c213919b8a1997df04bef869251db4ca8efba1b76b1bd9f7bb",
+        "unvendored_tests": false,
+        "version": "8.1.7"
+    },
+    "ipycanvas": {
+        "depends": [
+            "numpy",
+            "ipywidgets",
+            "pillow"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/e1/e2/9cb458d5afb33e5a4081f3ff50050c9fcc45854e44cf9c688b8709f2b1ef/ipycanvas-0.14.1-py2.py3-none-any.whl",
+        "imports": [
+            "ipycanvas"
+        ],
+        "install_dir": "site",
+        "name": "ipycanvas",
+        "package_type": "package",
+        "sha256": "55962bd71bb8b51a58ea3986139e8d517e4d7afc0722f86829f549a9e5c979b6",
+        "unvendored_tests": false,
+        "version": "0.14.1"
+    },
+    "pythreejs": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/d8/8b/e2bbeb42068f0c48899e8eddd34902afc0f7429d4d2a152d2dc2670dc661/pythreejs-2.4.2-py3-none-any.whl",
+        "imports": [
+            "pythreejs"
+        ],
+        "install_dir": "site",
+        "name": "pythreejs",
+        "package_type": "package",
+        "sha256": "8418807163ad91f4df53b58c4e991b26214852a1236f28f1afeaadf99d095818",
+        "unvendored_tests": false,
+        "version": "2.4.2"
+    },
+    "ipydatawidgets": {
+        "depends": [
+            "ipywidgets"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/f1/5b/e63c877c4c94382b66de5045e08ec8cd960e8a4d22f0d62a4dfb1f9e5ac6/ipydatawidgets-4.3.5-py2.py3-none-any.whl",
+        "imports": [
+            "ipydatawidgets"
+        ],
+        "install_dir": "site",
+        "name": "ipydatawidgets",
+        "package_type": "package",
+        "sha256": "d590cdb7c364f2f6ab346f20b9d2dd661d27a834ef7845bc9d7113118f05ec87",
+        "unvendored_tests": false,
+        "version": "4.3.5"
+    },
+    "jupyterlab-widgets": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/43/6a/ca128561b22b60bd5a0c4ea26649e68c8556b82bc70a0c396eebc977fe86/jupyterlab_widgets-3.0.15-py3-none-any.whl",
+        "imports": [
+            "jupyterlab_widgets"
+        ],
+        "install_dir": "site",
+        "name": "jupyterlab-widgets",
+        "package_type": "package",
+        "sha256": "d59023d7d7ef71400d51e6fee9a88867f6e65e10a4201605d2d7f3e8f012a31c",
+        "unvendored_tests": false,
+        "version": "3.0.15"
+    },
+    "panel": {
+        "depends": [
+            "bokeh",
+            "param",
+            "pyviz-comms"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/b2/be/ce3368145f22d64095e03591deeb26986b749b0b1c8373d426f8312c3a96/panel-1.8.2-py3-none-any.whl",
+        "imports": [
+            "panel"
+        ],
+        "install_dir": "site",
+        "name": "panel",
+        "package_type": "package",
+        "sha256": "e9cb26baca4263bf32432328fa6a37b2b09922af99a1a009abe1f12287f39836",
+        "unvendored_tests": false,
+        "version": "1.8.2"
+    },
+    "pyviz-comms": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/13/5a/f8c0868199bbb231a02616286ce8a4ccb85f5387b9215510297dcfedd214/pyviz_comms-3.0.6-py3-none-any.whl",
+        "imports": [
+            "pyviz_comms"
+        ],
+        "install_dir": "site",
+        "name": "pyviz-comms",
+        "package_type": "package",
+        "sha256": "4eba6238cd4a7f4add2d11879ce55411785b7d38a7c5dba42c7a0826ca53e6c2",
+        "unvendored_tests": false,
+        "version": "3.0.6"
+    },
+    "holoviews": {
+        "depends": [
+            "panel",
+            "pyparsing",
+            "narwhals",
+            "tqdm"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/30/75/d451b9a0ab3a9c0b2c7d1d3cf0bcf797ccac420f3479476f9867e1737d39/holoviews-1.21.0-py3-none-any.whl",
+        "imports": [
+            "holoviews"
+        ],
+        "install_dir": "site",
+        "name": "holoviews",
+        "package_type": "package",
+        "sha256": "74f3c01f35b9e8e2a8d6eb457a7ef05727de2a2a56509d59d7dc0d0409bc91c0",
+        "unvendored_tests": false,
+        "version": "1.21.0"
+    },
+    "hvplot": {
+        "depends": [
+            "holoviews",
+            "pandas",
+            "colorcet"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/60/f5/99be28b5d19644343f51391841dadf48b91ade96c1885e1630727cbcb4bf/hvplot-0.12.1-py3-none-any.whl",
+        "imports": [
+            "hvplot"
+        ],
+        "install_dir": "site",
+        "name": "hvplot",
+        "package_type": "package",
+        "sha256": "034b5061cba597877f85dd427523364f11677d9d04c5e845c17e6d733a7bfaed",
+        "unvendored_tests": false,
+        "version": "0.12.1"
+    },
+    "colorcet": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/c6/c6/9963d588cc3d75d766c819e0377a168ef83cf3316a92769971527a1ad1de/colorcet-3.1.0-py3-none-any.whl",
+        "imports": [
+            "colorcet"
+        ],
+        "install_dir": "site",
+        "name": "colorcet",
+        "package_type": "package",
+        "sha256": "2a7d59cc8d0f7938eeedd08aad3152b5319b4ba3bcb7a612398cc17a384cb296",
+        "unvendored_tests": false,
+        "version": "3.1.0"
+    },
+    "openpyxl": {
+        "depends": [
+            "et-xmlfile"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/c0/da/977ded879c29cbd04de313843e76868e6e13408a94ed6b987245dc7c8506/openpyxl-3.1.5-py2.py3-none-any.whl",
+        "imports": [
+            "openpyxl"
+        ],
+        "install_dir": "site",
+        "name": "openpyxl",
+        "package_type": "package",
+        "sha256": "5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2",
+        "unvendored_tests": false,
+        "version": "3.1.5"
+    },
+    "et-xmlfile": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl",
+        "imports": [
+            "et_xmlfile"
+        ],
+        "install_dir": "site",
+        "name": "et-xmlfile",
+        "package_type": "package",
+        "sha256": "7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa",
+        "unvendored_tests": false,
+        "version": "2.0.0"
+    },
+    "altair": {
+        "depends": [
+            "typing-extensions",
+            "jinja2",
+            "jsonschema",
+            "packaging",
+            "narwhals"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/aa/f3/0b6ced594e51cc95d8c1fc1640d3623770d01e4969d29c0bd09945fafefa/altair-5.5.0-py3-none-any.whl",
+        "imports": [
+            "altair"
+        ],
+        "install_dir": "site",
+        "name": "altair",
+        "package_type": "package",
+        "sha256": "91a310b926508d560fe0148d02a194f38b824122641ef528113d029fcd129f8c",
+        "unvendored_tests": false,
+        "version": "5.5.0"
+    },
+    "bokeh": {
+        "depends": [
+            "contourpy",
+            "numpy",
+            "jinja2",
+            "pandas",
+            "pillow",
+            "python-dateutil",
+            "six",
+            "typing-extensions",
+            "pyyaml",
+            "xyzservices"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/96/9a/8e641b5415e12036d8a206147b8229d917a767b7d939521458d90feddcf5/bokeh-3.8.0-py3-none-any.whl",
+        "imports": [
+            "bokeh"
+        ],
+        "install_dir": "site",
+        "name": "bokeh",
+        "package_type": "package",
+        "sha256": "117c5e559231ad39fef87891a1a1b62b3bfefbaa47d536023537338f46015841",
+        "unvendored_tests": false,
+        "version": "3.8.0"
+    },
+    "sympy": {
+        "depends": [
+            "mpmath"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+        "imports": [
+            "sympy"
+        ],
+        "install_dir": "site",
+        "name": "sympy",
+        "package_type": "package",
+        "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5",
+        "unvendored_tests": false,
+        "version": "1.14.0"
+    },
+    "z3": {
+        "depends": [],
+        "file_name": "z3-4.14.2.0-py3-none-pyodide_2024_0_wasm32.whl",
+        "imports": [
+            "z3"
+        ],
+        "install_dir": "site",
+        "name": "z3",
+        "package_type": "package",
+        "sha256": "466890b09dcdc74834e08de84eff640b1329788c969e44bf5f1b4e1704b7e185",
+        "unvendored_tests": false,
+        "version": "4.14.2.0"
+    }
+}
