@@ -306,6 +306,11 @@ def get_pypi_packages():
             name="ipyevents",
             version="2.0.4",
             imports=["ipyevents"],
+        ),
+        Package(
+            name="fastjsonschema",
+            version="2.21.2",
+            imports=["fastjsonschema"],
         )
     ]
 
