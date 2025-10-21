@@ -1,0 +1,57 @@
+{
+    "@jupyterlab/console-extension:tracker": {
+        "promptCellConfig": {
+            "codeFolding": false,
+            "lineNumbers": false,
+            "autoClosingBrackets": true
+        }
+    },
+    "@jupyterlab/fileeditor-extension:plugin": {
+        "editorConfig": {
+            "lineNumbers": true,
+            "autoClosingBrackets": true
+        }
+    },
+    "@jupyterlab/notebook-extension:tracker": {
+        "codeCellConfig": {
+            "lineNumbers": false,
+            "lineWrap": false,
+            "autoClosingBrackets": true
+        },
+        "markdownCellConfig": {
+            "lineNumbers": false,
+            "matchBrackets": false,
+            "autoClosingBrackets": true
+        },
+        "rawCellConfig": {
+            "lineNumbers": false,
+            "matchBrackets": false,
+            "autoClosingBrackets": true
+        },
+        "enableKernelInitNotification": false,
+        "defaultCell": "code",
+        "autoStartDefaultKernel": false,
+        "showInputPlaceholder": true,
+        "inputHistoryScope": "global",
+        "kernelShutdown": false,
+        "autoRenderMarkdownCells": false,
+        "scrollPastEnd": true,
+        "recordTiming": false,
+        "overscanCount": 1,
+        "maxNumberOutputs": 50,
+        "scrollHeadingToTop": true,
+        "showEditorForReadOnlyMarkdown": true,
+        "kernelStatus": {
+            "showOnStatusBar": false,
+            "showProgress": true
+        },
+        "documentWideUndoRedo": false,
+        "showHiddenCellsButton": true,
+        "renderingLayout": "default",
+        "sideBySideLeftMarginOverride": "10px",
+        "sideBySideRightMarginOverride": "10px",
+        "sideBySideOutputRatio": 1,
+        "windowingMode": "defer",
+        "accessKernelHistory": false
+    }
+}
