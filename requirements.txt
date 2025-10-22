@@ -48,3 +48,4 @@ pythreejs
 anywidget
 altair
 jupyter_bokeh
+jupyterlab-open-url-parameter==0.3.0
