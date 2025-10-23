@@ -311,6 +311,12 @@ def get_pypi_packages():
             name="fastjsonschema",
             version="2.21.2",
             imports=["fastjsonschema"],
+        ),
+        Package(
+            name="pytransform3d",
+            version="3.14.3",
+            imports=["pytransform3d"],
+            depends=["numpy"],
         )
     ]
 
