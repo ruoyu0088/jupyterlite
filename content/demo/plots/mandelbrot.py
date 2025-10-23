@@ -19,6 +19,7 @@ class ImageWidget(anywidget.AnyWidget):
         canvas.width = model.get("width");
         canvas.height = model.get("height");
         canvas.style.border = "1px solid black";
+        canvas.style.touchAction = "none"; // disable browser pinch zoom & scroll
         el.appendChild(canvas);
         const ctx = canvas.getContext("2d");
         let img = null;
@@ -45,21 +46,20 @@ class ImageWidget(anywidget.AnyWidget):
 
         model.on("change:image", async () => { await loadImage(); draw(); });
 
-        // Zoom
+        // --- Mouse zoom ---
         canvas.addEventListener("wheel", event => {
             event.preventDefault();
             const rect = canvas.getBoundingClientRect();
             model.set("zoom_event", { 
-                count: count,
+                count: count++,
                 x: event.clientX - rect.left,
                 y: event.clientY - rect.top,
                 delta: event.deltaY
             });
             model.save_changes();
-            count += 1;
         });
 
-        // Pan
+        // --- Mouse pan ---
         let isPanning = false, panStartX = 0, panStartY = 0;
         canvas.addEventListener("mousedown", e => {
             const rect = canvas.getBoundingClientRect();
@@ -85,6 +85,73 @@ class ImageWidget(anywidget.AnyWidget):
             }
         });
         canvas.addEventListener("mouseleave", () => { isPanning = false; });
+
+        // --- Touch support ---
+        let touchMode = null;
+        let lastTouchDist = 0;
+        let panTouchStart = {x: 0, y: 0};
+
+        function getTouchPos(touch) {
+            const rect = canvas.getBoundingClientRect();
+            return {x: touch.clientX - rect.left, y: touch.clientY - rect.top};
+        }
+
+        function distance(t1, t2) {
+            const dx = t2.clientX - t1.clientX;
+            const dy = t2.clientY - t1.clientY;
+            return Math.sqrt(dx*dx + dy*dy);
+        }
+
+        canvas.addEventListener("touchstart", e => {
+            e.preventDefault();
+            if (e.touches.length === 1) {
+                // Single finger pan
+                touchMode = "pan";
+                panTouchStart = getTouchPos(e.touches[0]);
+            } else if (e.touches.length === 2) {
+                // Pinch zoom
+                touchMode = "zoom";
+                lastTouchDist = distance(e.touches[0], e.touches[1]);
+            }
+        });
+
+        canvas.addEventListener("touchmove", e => {
+            e.preventDefault();
+            const rect = canvas.getBoundingClientRect();
+            if (touchMode === "pan" && e.touches.length === 1) {
+                const pos = getTouchPos(e.touches[0]);
+                model.set("pan_event", { 
+                    x0: panTouchStart.x, y0: panTouchStart.y,
+                    x1: pos.x, y1: pos.y 
+                });
+                model.save_changes();
+            } else if (touchMode === "zoom" && e.touches.length === 2) {
+                const newDist = distance(e.touches[0], e.touches[1]);
+                const cx = (e.touches[0].clientX + e.touches[1].clientX)/2 - rect.left;
+                const cy = (e.touches[0].clientY + e.touches[1].clientY)/2 - rect.top;
+                model.set("zoom_event", { 
+                    count: count++,
+                    x: cx, y: cy, 
+                    delta: -(newDist - lastTouchDist) * 5 // scale factor for sensitivity
+                });
+                model.save_changes();
+                lastTouchDist = newDist;
+            }
+        });
+
+        canvas.addEventListener("touchend", e => {
+            if (touchMode === "pan" && e.changedTouches.length > 0) {
+                const pos = getTouchPos(e.changedTouches[0]);
+                model.set("pan_event", { 
+                    dx: pos.x - panTouchStart.x, 
+                    dy: pos.y - panTouchStart.y 
+                });
+                model.save_changes();
+            }
+            touchMode = null;
+        });
+
+        canvas.addEventListener("touchcancel", () => { touchMode = null; });
     }
     export default { render };
     """
@@ -99,6 +166,7 @@ class ImageWidget(anywidget.AnyWidget):
         success, buffer = cv2.imencode(".png", array[:, :, ::-1])
         data = base64.b64encode(buffer).decode()
         self.image = f"data:image/png;base64,{data}"
+
 
 # =====================
 # Setup CFFI and WASM
