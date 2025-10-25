@@ -10,10 +10,14 @@ import anywidget
 from traitlets import Int, Unicode, Dict
 
 
+import base64
+import cv2
+import anywidget
+from traitlets import Int, Unicode, Dict
+
 class ImageWidget(anywidget.AnyWidget):
     _esm = """
     function render({ model, el }) {
-      let count = 0;
       const canvas = document.createElement("canvas");
       canvas.width = model.get("width");
       canvas.height = model.get("height");
@@ -21,7 +25,6 @@ class ImageWidget(anywidget.AnyWidget):
       el.appendChild(canvas);
 
       const ctx = canvas.getContext("2d");
-
       let img = null;
 
       async function loadImage() {
@@ -37,7 +40,6 @@ class ImageWidget(anywidget.AnyWidget):
 
       async function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
         if (img) {
           ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         }
@@ -56,18 +58,28 @@ class ImageWidget(anywidget.AnyWidget):
         draw();
       });
 
-      canvas.addEventListener("mousemove", (event) => {
-          const rect = canvas.getBoundingClientRect();
-          const mouseX = event.clientX - rect.left;
-          const mouseY = event.clientY - rect.top;
+      function handleMove(clientX, clientY) {
+        const rect = canvas.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
 
-          model.set("move_event", {
-            x: mouseX,
-            y: mouseY
-          });
-          model.save_changes();
+        model.set("move_event", { x, y });
+        model.save_changes();
+      }
+
+      // Mouse support
+      canvas.addEventListener("mousemove", (event) => {
+        handleMove(event.clientX, event.clientY);
+      });
+
+      // Touch support
+      canvas.addEventListener("touchmove", (event) => {
+        event.preventDefault(); // Prevent scrolling
+        if (event.touches.length > 0) {
+          const touch = event.touches[0];
+          handleMove(touch.clientX, touch.clientY);
         }
-      );
+      }, { passive: false });
     }
 
     export default { render };
