@@ -26,6 +26,7 @@ jobs:
           jupyter lite build --contents content --output-dir dist --pyodide pyodide.tar.bz2
           python utils.py patch
           cp -f patch/568.01d8de54f0240b4168bd.js dist/extensions/jupyterlab-open-url-parameter/static/
+          cp -f patch/122.99bdb660447bc558238a.js dist/extensions/ipyevents/static/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
