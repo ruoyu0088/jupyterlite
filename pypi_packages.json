@@ -391,5 +391,20 @@
         "sha256": "4ec2ca29b5121fa99a609c221b75d3adb3295872f61ce5b0a9128d06532ea6c7",
         "unvendored_tests": false,
         "version": "3.14.3"
+    },
+    "itables": {
+        "depends": [
+            "typing_extensions"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/e0/96/2b99f42b52e8a6b3eaca872eec43de6eabf6fbcd3f85363b82b749b68f3f/itables-2.5.2-py3-none-any.whl",
+        "imports": [
+            "itables"
+        ],
+        "install_dir": "site",
+        "name": "itables",
+        "package_type": "package",
+        "sha256": "a26b5a5fad079db7eee83ff720fb98395f7327fddcb7af84d10e1165a139acf2",
+        "unvendored_tests": false,
+        "version": "2.5.2"
     }
 }

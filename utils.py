@@ -317,7 +317,13 @@ def get_pypi_packages():
             version="3.14.3",
             imports=["pytransform3d"],
             depends=["numpy"],
-        )
+        ),
+        Package(
+            name="itables",
+            version="2.5.2",
+            imports=["itables"],
+            depends=["typing_extensions"],
+        ),
     ]
 
 
