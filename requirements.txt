@@ -50,3 +50,4 @@ altair
 jupyter_bokeh
 jupyterlab-open-url-parameter==0.3.0
 jupyterlab-myst==2.4.2
+k3d

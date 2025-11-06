@@ -328,7 +328,31 @@ def get_pypi_packages():
             name="sympy-plot-backends",
             version="4.0.0",
             imports=["spb"],
-            depends=["matplotlib", "sympy", "bokeh", "plotly"]
+            depends=["appdirs", "mergedeep", "sympy", "ipywidgets", "param", "colorcet", "matplotlib", "bokeh", "plotly"]
+        ),
+        Package(
+            name="k3d",
+            version="2.17.0",
+            imports=["k3d"],
+            depends=["msgpack", "traittypes"]
+        ),
+        Package(
+            name="appdirs",
+            version="1.4.4",
+            imports=["appdirs"],
+            depends=[]
+        ),
+        Package(
+            name="mergedeep",
+            version="1.3.4",
+            imports=["mergedeep"],
+            depends=[]
+        ),
+        Package(
+            name="traittypes",
+            version="0.2.3",
+            imports=["traittypes"],
+            depends=[]
         )
     ]
 
