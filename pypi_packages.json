@@ -406,5 +406,23 @@
         "sha256": "a26b5a5fad079db7eee83ff720fb98395f7327fddcb7af84d10e1165a139acf2",
         "unvendored_tests": false,
         "version": "2.5.2"
+    },
+    "sympy-plot-backends": {
+        "depends": [
+            "matplotlib",
+            "sympy",
+            "bokeh",
+            "plotly"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/6a/4d/931bf3735583f6490c814b3f84dcb4d0129250d224032f9b06201e2a7dfc/sympy_plot_backends-4.0.0-py3-none-any.whl",
+        "imports": [
+            "spb"
+        ],
+        "install_dir": "site",
+        "name": "sympy-plot-backends",
+        "package_type": "package",
+        "sha256": "cb2d0a3f32c39f74ab817a4e2cb6a87f261c7c386266609eafc3383b69ad575a",
+        "unvendored_tests": false,
+        "version": "4.0.0"
     }
 }

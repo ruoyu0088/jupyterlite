@@ -324,6 +324,12 @@ def get_pypi_packages():
             imports=["itables"],
             depends=["typing_extensions"],
         ),
+        Package(
+            name="sympy-plot-backends",
+            version="4.0.0",
+            imports=["spb"],
+            depends=["matplotlib", "sympy", "bokeh", "plotly"]
+        )
     ]
 
 
