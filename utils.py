@@ -353,6 +353,12 @@ def get_pypi_packages():
             version="0.2.3",
             imports=["traittypes"],
             depends=[]
+        ),
+        Package(
+            name="awkward",
+            version="2.7.4",
+            imports=["awkward"],
+            depends=["numpy", "awkward_cpp", "fsspec"],
         )
     ]
 

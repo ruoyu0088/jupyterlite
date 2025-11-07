@@ -484,5 +484,22 @@
         "sha256": "49016082ce740d6556d9bb4672ee2d899cd14f9365f17cbb79d5d96b47096d4e",
         "unvendored_tests": false,
         "version": "0.2.3"
+    },
+    "awkward": {
+        "depends": [
+            "numpy",
+            "awkward_cpp",
+            "fsspec"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/f1/73/c5cb2c7384d81270681d2f9309c973769fed757770caab887489d0207fb4/awkward-2.7.4-py3-none-any.whl",
+        "imports": [
+            "awkward"
+        ],
+        "install_dir": "site",
+        "name": "awkward",
+        "package_type": "package",
+        "sha256": "3b3c40fae0ff7cd184d967770e6b3fc29e947c399c027c2bc72b9315c1144513",
+        "unvendored_tests": false,
+        "version": "2.7.4"
     }
 }
