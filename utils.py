@@ -359,6 +359,12 @@ def get_pypi_packages():
             version="2.7.4",
             imports=["awkward"],
             depends=["numpy", "awkward_cpp", "fsspec"],
+        ),
+        Package(
+            name="markdownify",
+            version="1.2.0",
+            imports=["markdownify"],
+            depends=[],
         )
     ]
 

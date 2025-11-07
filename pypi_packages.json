@@ -501,5 +501,18 @@
         "sha256": "3b3c40fae0ff7cd184d967770e6b3fc29e947c399c027c2bc72b9315c1144513",
         "unvendored_tests": false,
         "version": "2.7.4"
+    },
+    "markdownify": {
+        "depends": [],
+        "file_name": "https://files.pythonhosted.org/packages/6a/e2/7af643acb4cae0741dffffaa7f3f7c9e7ab4046724543ba1777c401d821c/markdownify-1.2.0-py3-none-any.whl",
+        "imports": [
+            "markdownify"
+        ],
+        "install_dir": "site",
+        "name": "markdownify",
+        "package_type": "package",
+        "sha256": "48e150a1c4993d4d50f282f725c0111bd9eb25645d41fa2f543708fd44161351",
+        "unvendored_tests": false,
+        "version": "1.2.0"
     }
 }
