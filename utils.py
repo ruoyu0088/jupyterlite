@@ -368,6 +368,12 @@ def get_pypi_packages():
             version="1.2.0",
             imports=["markdownify"],
             depends=[],
+        ),
+        Package(
+            name="graphviz-anywidget",
+            version="0.8.0",
+            imports=["graphviz_anywidget"],
+            depends=["ipywidgets", "anywidget", "psygnal"]
         )
     ]
 

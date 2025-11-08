@@ -517,5 +517,22 @@
         "sha256": "48e150a1c4993d4d50f282f725c0111bd9eb25645d41fa2f543708fd44161351",
         "unvendored_tests": false,
         "version": "1.2.0"
+    },
+    "graphviz-anywidget": {
+        "depends": [
+            "ipywidgets",
+            "anywidget",
+            "psygnal"
+        ],
+        "file_name": "https://files.pythonhosted.org/packages/54/81/eb71357448aca5f512237fcf3724fca356fe0bcbded56457d934a5192855/graphviz_anywidget-0.8.0-py3-none-any.whl",
+        "imports": [
+            "graphviz_anywidget"
+        ],
+        "install_dir": "site",
+        "name": "graphviz-anywidget",
+        "package_type": "package",
+        "sha256": "725bd6f1242964da98ec0af89ad0ed0e3e58f95a1d3d2ebee140258db940630b",
+        "unvendored_tests": false,
+        "version": "0.8.0"
     }
 }
