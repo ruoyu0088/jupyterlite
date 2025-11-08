@@ -210,12 +210,15 @@ def get_pypi_packages():
             imports=["ipycanvas"],
             depends=["numpy", "ipywidgets", "pillow"],
         ),
-        Package(name="pythreejs", version="2.4.2", imports=["pythreejs"], depends=[]),
+        Package(name="pythreejs", 
+                version="2.4.2", 
+                imports=["pythreejs"], 
+                depends=["ipydatawidgets"]),
         Package(
             name="ipydatawidgets",
             version="4.3.5",
             imports=["ipydatawidgets"],
-            depends=["ipywidgets"],
+            depends=["ipywidgets", "traittypes"],
         ),
         Package(
             name="jupyterlab-widgets", version="3.0.15", imports=["jupyterlab_widgets"]
