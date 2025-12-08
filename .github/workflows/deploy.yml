@@ -27,6 +27,12 @@ jobs:
           python utils.py patch
           cp -f patch/568.01d8de54f0240b4168bd.js dist/extensions/jupyterlab-open-url-parameter/static/
           cp -f patch/122.99bdb660447bc558238a.js dist/extensions/ipyevents/static/
+      - name: Upload permanent build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jupyterlite-build
+          path: ./dist
+          retention-days: 90          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
